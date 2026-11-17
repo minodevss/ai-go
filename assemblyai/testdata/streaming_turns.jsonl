@@ -1,0 +1,6 @@
+{"type":"Begin","id":"cfd280c7-5a9b-4dd6-8c05-235ebfc27976","expires_at":1760000000,"configuration":{"model":"universal-3-6-pro","mode":"balanced","api_version":"2026-01-01"}}
+{"type":"SpeechStarted","timestamp":480,"confidence":0.9}
+{"type":"Turn","turn_order":0,"turn_is_formatted":false,"end_of_turn":false,"transcript":"hello","utterance":"","end_of_turn_confidence":0.0,"words":[{"text":"hello","start":480,"end":900,"confidence":0.9,"word_is_final":true}]}
+{"type":"Turn","turn_order":0,"turn_is_formatted":true,"end_of_turn":true,"transcript":"Hello there.","utterance":"Hello there.","end_of_turn_confidence":1.0,"words":[{"text":"Hello","start":480,"end":900,"confidence":0.9,"word_is_final":true,"speaker":"A"},{"text":"there.","start":900,"end":1300,"confidence":0.9,"word_is_final":true,"speaker":"A"}]}
+{"type":"Turn","turn_order":1,"turn_is_formatted":true,"end_of_turn":true,"transcript":"","utterance":"","end_of_turn_confidence":1.0,"words":[]}
+{"type":"Termination","audio_duration_seconds":2,"session_duration_seconds":3}
