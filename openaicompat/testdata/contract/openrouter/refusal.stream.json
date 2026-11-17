@@ -1,0 +1,30 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "data: {\"id\":\"gen-f1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null,\"refusal\":\"I cannot \"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-f1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"refusal\":\"help with that.\"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-f1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"stop\"}]}",
+          "",
+          "data: {\"id\":\"gen-f1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[],\"usage\":{\"prompt_tokens\":9,\"completion_tokens\":6}}",
+          "",
+          "data: [DONE]",
+          ""
+        ]
+      }
+    }
+  ]
+}

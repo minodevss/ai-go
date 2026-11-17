@@ -1,0 +1,58 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.deepseek.com/chat/completions"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "ds-r1",
+          "object": "chat.completion",
+          "created": 1760000000,
+          "model": "m",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "",
+                "reasoning_content": "I should call the weather tool for Seoul.",
+                "tool_calls": [
+                  {
+                    "id": "call_00_XyZ",
+                    "type": "function",
+                    "function": {
+                      "name": "get_weather",
+                      "arguments": "{\"city\":\"Seoul\"}"
+                    }
+                  }
+                ]
+              },
+              "finish_reason": "tool_calls"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 100,
+            "completion_tokens": 30,
+            "total_tokens": 130,
+            "prompt_cache_hit_tokens": 64,
+            "prompt_cache_miss_tokens": 36,
+            "prompt_tokens_details": {
+              "cached_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 20
+            }
+          }
+        }
+      }
+    }
+  ]
+}

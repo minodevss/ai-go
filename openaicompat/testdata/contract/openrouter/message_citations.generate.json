@@ -1,0 +1,62 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "gen-c1",
+          "object": "chat.completion",
+          "created": 1760000000,
+          "model": "m",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "Seoul is sunny.",
+                "reasoning": "Looked at the sources.",
+                "reasoning_details": [
+                  {
+                    "type": "reasoning.summary",
+                    "summary": "Looked at the sources.",
+                    "id": "rs-bbb1",
+                    "format": "openai-responses-v1",
+                    "index": 0
+                  }
+                ],
+                "annotations": [
+                  {
+                    "type": "url_citation",
+                    "url_citation": {
+                      "url": "https://example.com/seoul",
+                      "title": "Seoul weather",
+                      "start_index": 0,
+                      "end_index": 12,
+                      "content": "snippet"
+                    }
+                  }
+                ]
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 40,
+            "completion_tokens": 30,
+            "total_tokens": 70,
+            "cost": 0.0004
+          }
+        }
+      }
+    }
+  ]
+}

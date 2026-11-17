@@ -1,0 +1,40 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          ": OPENROUTER PROCESSING",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"reasoning\":\"The user wants \"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"reasoning\":\"the weather in Seoul.\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"The user wants the weather in Seoul.\",\"signature\":\"SIG-OR-1\",\"id\":\"rs-aaa1\",\"format\":\"anthropic-claude-v1\",\"index\":0}]},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"reasoning\":\"\",\"reasoning_details\":[{\"type\":\"reasoning.encrypted\",\"data\":\"gAAAAABoENC\",\"id\":\"rs-aaa2\",\"format\":\"anthropic-claude-v1\",\"index\":1}]},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"tool_calls\":[{\"index\":0,\"id\":\"toolu_01ABC\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"\"}}]},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"city\\\":\"}}]},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\"Seoul\\\"}\"}}]},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"tool_calls\"}]}",
+          "",
+          "data: {\"id\":\"gen-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[],\"usage\":{\"prompt_tokens\":120,\"completion_tokens\":85,\"total_tokens\":205,\"cost\":0.0012,\"prompt_tokens_details\":{\"cached_tokens\":64},\"completion_tokens_details\":{\"reasoning_tokens\":70}}}",
+          "",
+          "data: [DONE]",
+          ""
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.deepseek.com/chat/completions"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "data: {\"id\":\"ds-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"reasoning_content\":\"I should call \"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"ds-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"reasoning_content\":\"the weather tool for Seoul.\"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"ds-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"tool_calls\":[{\"index\":0,\"id\":\"call_00_XyZ\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"\"}}]},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"ds-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Seoul\\\"}\"}}]},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"ds-r1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":100,\"completion_tokens\":30,\"total_tokens\":130,\"prompt_cache_hit_tokens\":64,\"prompt_cache_miss_tokens\":36,\"prompt_tokens_details\":{\"cached_tokens\":64},\"completion_tokens_details\":{\"reasoning_tokens\":20}}}",
+          "",
+          "data: [DONE]",
+          ""
+        ]
+      }
+    }
+  ]
+}

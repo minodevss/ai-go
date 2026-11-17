@@ -1,0 +1,30 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.deepseek.com/chat/completions"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "data: {\"id\":\"ds-a1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"reasoning_content\":\"Simple fact.\"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"ds-a1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"Seoul is \"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"ds-a1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"sunny.\"},\"finish_reason\":null}]}",
+          "",
+          "data: {\"id\":\"ds-a1\",\"object\":\"chat.completion.chunk\",\"created\":1760000000,\"model\":\"m\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":40,\"completion_tokens\":12,\"total_tokens\":52,\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":40,\"completion_tokens_details\":{\"reasoning_tokens\":5}}}",
+          "",
+          "data: [DONE]",
+          ""
+        ]
+      }
+    }
+  ]
+}
