@@ -1,0 +1,91 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GOWORK: "off"
+  GOTOOLCHAIN: local
+
+jobs:
+  root:
+    name: root (Go ${{ matrix.go }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go: ["1.26", "1.27"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go }}
+          check-latest: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install golangci-lint
+        uses: golangci/golangci-lint-action@v8
+        with:
+          version: v2.15.0
+          install-only: true
+      - run: golangci-lint fmt --diff
+      - run: go mod tidy -diff
+      - run: go vet ./...
+      - run: golangci-lint run ./...
+      - run: go fix -diff ./...
+      - run: go test -race -shuffle=on ./...
+      - name: govulncheck
+        run: go run golang.org/x/vuln/cmd/govulncheck@latest ./...
+      - name: gorelease
+        continue-on-error: true
+        run: |
+          go install golang.org/x/exp/cmd/gorelease@latest
+          gorelease -base=latest
+
+  modules:
+    name: ${{ matrix.module }} (Go ${{ matrix.go }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go: ["1.26", "1.27"]
+        module: [aiotel, aimcp, uiredis]
+    services:
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      UIREDIS_TEST_ADDR: localhost:6379
+    defaults:
+      run:
+        working-directory: ${{ matrix.module }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go }}
+          check-latest: true
+      - uses: golangci/golangci-lint-action@v8
+        with:
+          version: v2.15.0
+          install-only: true
+      - run: go mod tidy -diff
+      - run: go vet ./...
+      - run: golangci-lint run ./...
+      - run: go test -race -shuffle=on ./...
