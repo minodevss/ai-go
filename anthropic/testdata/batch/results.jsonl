@@ -1,0 +1,4 @@
+{"custom_id":"my-second-request","result":{"type":"errored","error":{"type":"error","error":{"type":"invalid_request_error","message":"messages: at least one message is required"},"request_id":"req_011CQ"}}}
+{"custom_id":"my-first-request","result":{"type":"succeeded","message":{"id":"msg_014VwiXbi91y3JMjcpyGBHX5","type":"message","role":"assistant","model":"claude-opus-5-5","content":[{"type":"text","text":"Hello! How can I help you today?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":11,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":9}}}}
+{"custom_id":"third-request","result":{"type":"canceled"}}
+{"custom_id":"fourth-request","result":{"type":"expired"}}

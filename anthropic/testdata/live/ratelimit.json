@@ -1,0 +1,139 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:9999/v1/messages",
+        "header": {
+          "Accept": [
+            "text/event-stream"
+          ],
+          "Anthropic-Version": [
+            "2026-10-21"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "ai-go"
+          ],
+          "X-Api-Key": [
+            "REDACTED"
+          ]
+        },
+        "body": {
+          "model": "claude-haiku-5-5",
+          "max_tokens": 4000,
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "What is the weather in Seoul? Use the tool."
+                }
+              ]
+            }
+          ],
+          "system": [
+            {
+              "type": "text",
+              "text": "Always call get_weather before answering a weather question. Answer in two short sentences."
+            }
+          ],
+          "tools": [
+            {
+              "name": "get_weather",
+              "description": "Current weather for a city",
+              "input_schema": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string",
+                    "description": "city name"
+                  }
+                },
+                "required": [
+                  "city"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ],
+          "thinking": {
+            "type": "adaptive",
+            "display": "summarized"
+          },
+          "output_config": {
+            "effort": "medium"
+          },
+          "stream": true
+        }
+      },
+      "response": {
+        "status": 429,
+        "header": {
+          "Anthropic-Organization-Id": [
+            "REDACTED"
+          ],
+          "Anthropic-Workspace-Id": [
+            "REDACTED"
+          ],
+          "Cf-Cache-Status": [
+            "REDACTED"
+          ],
+          "Cf-Ray": [
+            "REDACTED"
+          ],
+          "Content-Security-Policy": [
+            "default-src 'none'; frame-ancestors 'none'"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Date": [
+            "Tue, 17 Nov 2026 13:31:33 GMT"
+          ],
+          "Request-Id": [
+            "req_011Ch8anYrMCy7avhdewsJRD"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Server-Timing": [
+            "REDACTED"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "Traceresponse": [
+            "REDACTED"
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "X-Gw-Account": [
+            "REDACTED"
+          ],
+          "X-Gw-Reason": [
+            "REDACTED"
+          ],
+          "X-Robots-Tag": [
+            "none"
+          ],
+          "X-Should-Retry": [
+            "true"
+          ]
+        },
+        "body": {
+          "type": "error",
+          "error": {
+            "type": "rate_limit_error",
+            "message": "Error"
+          },
+          "request_id": "req_011Ch8anYrMCy7avhdewsJRD"
+        }
+      }
+    }
+  ]
+}

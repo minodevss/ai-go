@@ -1,0 +1,60 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:9999/v1/messages",
+        "header": {
+          "Accept": [
+            "application/json"
+          ],
+          "Anthropic-Version": [
+            "2026-10-21"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "ai-go"
+          ],
+          "X-Api-Key": [
+            "REDACTED"
+          ]
+        },
+        "body": {
+          "model": "claude-haiku-5-5",
+          "max_tokens": 16000,
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "hi"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "status": 401,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ],
+          "Date": [
+            "Tue, 17 Nov 2026 13:31:46 GMT"
+          ]
+        },
+        "body": {
+          "error": {
+            "message": "invalid gw API key",
+            "type": "authentication_error"
+          },
+          "type": "error"
+        }
+      }
+    }
+  ]
+}
