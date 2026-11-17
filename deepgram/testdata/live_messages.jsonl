@@ -1,0 +1,7 @@
+{"type":"Metadata","transaction_key":"deprecated","request_id":"fb9a6a4c-8d9e-4a5e-9c4a-2f3a8b7c1d5e","sha256":"abc","created":"2024-05-12T18:57:13.426Z","duration":0,"channels":0}
+{"type":"SpeechStarted","channel":[0],"timestamp":0.8}
+{"type":"Results","channel_index":[0,1],"duration":1.0,"start":0.0,"is_final":false,"speech_final":false,"from_finalize":false,"channel":{"alternatives":[{"transcript":"hello","confidence":0.9,"words":[{"word":"hello","start":0.1,"end":0.4,"confidence":0.9,"punctuated_word":"Hello"}]}]}}
+{"type":"Results","channel_index":[0,1],"duration":1.5,"start":0.0,"is_final":true,"speech_final":true,"from_finalize":false,"channel":{"alternatives":[{"transcript":"hello world","confidence":0.98,"words":[{"word":"hello","start":0.1,"end":0.4,"confidence":0.99,"punctuated_word":"Hello","speaker":0},{"word":"world","start":0.5,"end":0.9,"confidence":0.99,"punctuated_word":"world.","speaker":1}]}]}}
+{"type":"Results","channel_index":[0,1],"duration":0.5,"start":1.5,"is_final":true,"speech_final":false,"from_finalize":false,"channel":{"alternatives":[{"transcript":"","confidence":0,"words":[]}]}}
+{"type":"UtteranceEnd","channel":[0,1],"last_word_end":3.2}
+{"type":"Error","variant":"SchemaError","description":"bad message","message":"x"}

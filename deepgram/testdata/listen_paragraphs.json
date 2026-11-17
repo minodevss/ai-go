@@ -1,0 +1,17 @@
+{
+  "metadata": {"request_id": "r", "duration": 5.0, "channels": 1},
+  "results": {
+    "channels": [{
+      "alternatives": [{
+        "transcript": "Hello there. How are you?",
+        "confidence": 0.99,
+        "languages": ["en"],
+        "words": [],
+        "paragraphs": {
+          "transcript": "\nSpeaker 0: Hello there. How are you?",
+          "paragraphs": [{"speaker": 0, "num_words": 5, "start": 0.1, "end": 2.5, "sentences": [{"text": "Hello there.", "start": 0.1, "end": 1.0}, {"text": "How are you?", "start": 1.2, "end": 2.5}]}]
+        }
+      }]
+    }]
+  }
+}
