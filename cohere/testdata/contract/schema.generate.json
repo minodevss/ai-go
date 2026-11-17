@@ -1,0 +1,41 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.cohere.com/v2/chat"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "e4f5a6b7-c8d9-4e0f-8a1b-3c4d5e6f7081",
+          "finish_reason": "COMPLETE",
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"a\":\"x\"}"
+              }
+            ]
+          },
+          "usage": {
+            "billed_units": {
+              "input_tokens": 5,
+              "output_tokens": 3
+            },
+            "tokens": {
+              "input_tokens": 20,
+              "output_tokens": 5
+            }
+          }
+        }
+      }
+    }
+  ]
+}

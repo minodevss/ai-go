@@ -1,0 +1,39 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.cohere.com/v2/chat"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "event: message-start",
+          "data: {\"type\":\"message-start\",\"id\":\"c2d3e4f5-a6b7-4c8d-8e9f-1a2b3c4d5e6f\",\"delta\":{\"message\":{\"role\":\"assistant\",\"content\":[],\"tool_plan\":\"\",\"tool_calls\":[],\"citations\":[]}}}",
+          "",
+          "event: content-start",
+          "data: {\"type\":\"content-start\",\"index\":0,\"delta\":{\"message\":{\"content\":{\"type\":\"text\",\"text\":\"\"}}}}",
+          "",
+          "event: content-delta",
+          "data: {\"type\":\"content-delta\",\"index\":0,\"delta\":{\"message\":{\"content\":{\"text\":\"One, \"}}}}",
+          "",
+          "event: content-delta",
+          "data: {\"type\":\"content-delta\",\"index\":0,\"delta\":{\"message\":{\"content\":{\"text\":\"two, \"}}}}",
+          "",
+          "event: content-end",
+          "data: {\"type\":\"content-end\",\"index\":0}",
+          "",
+          "event: message-end",
+          "data: {\"type\":\"message-end\",\"delta\":{\"finish_reason\":\"STOP_SEQUENCE\",\"usage\":{\"billed_units\":{\"input_tokens\":5,\"output_tokens\":3},\"tokens\":{\"input_tokens\":10,\"output_tokens\":4}}}}",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}

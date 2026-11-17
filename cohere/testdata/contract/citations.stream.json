@@ -1,0 +1,51 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.cohere.com/v2/chat"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "event: message-start",
+          "data: {\"type\":\"message-start\",\"id\":\"7d9e2f4a-6b1c-4d3e-8f50-1a2b3c4d5e6f\",\"delta\":{\"message\":{\"role\":\"assistant\",\"content\":[],\"tool_plan\":\"\",\"tool_calls\":[],\"citations\":[]}}}",
+          "",
+          "event: content-start",
+          "data: {\"type\":\"content-start\",\"index\":0,\"delta\":{\"message\":{\"content\":{\"type\":\"text\",\"text\":\"\"}}}}",
+          "",
+          "event: content-delta",
+          "data: {\"type\":\"content-delta\",\"index\":0,\"delta\":{\"message\":{\"content\":{\"text\":\"The grass\"}}}}",
+          "",
+          "event: content-delta",
+          "data: {\"type\":\"content-delta\",\"index\":0,\"delta\":{\"message\":{\"content\":{\"text\":\" is green.\"}}}}",
+          "",
+          "event: citation-start",
+          "data: {\"type\":\"citation-start\",\"index\":0,\"delta\":{\"message\":{\"citations\":{\"start\":4,\"end\":9,\"text\":\"grass\",\"content_index\":0,\"type\":\"TEXT_CONTENT\",\"sources\":[{\"type\":\"document\",\"id\":\"0\",\"document\":{\"id\":\"0\",\"snippet\":\"The grass is green.\",\"title\":\"colors.txt\"}}]}}}}",
+          "",
+          "event: citation-end",
+          "data: {\"type\":\"citation-end\",\"index\":0}",
+          "",
+          "event: citation-start",
+          "data: {\"type\":\"citation-start\",\"index\":1,\"delta\":{\"message\":{\"citations\":{\"start\":13,\"end\":18,\"text\":\"green\",\"content_index\":0,\"type\":\"TEXT_CONTENT\",\"sources\":[{\"type\":\"document\",\"id\":\"0\",\"document\":{\"id\":\"0\",\"snippet\":\"The grass is green.\",\"title\":\"colors.txt\"}},{\"type\":\"tool\",\"id\":\"lookup_x9y8z7w6v5u4:0\",\"tool_output\":{\"title\":\"palette\",\"content\":\"green is #00FF00\"}}]}}}}",
+          "",
+          "event: citation-end",
+          "data: {\"type\":\"citation-end\",\"index\":1}",
+          "",
+          "event: content-end",
+          "data: {\"type\":\"content-end\",\"index\":0}",
+          "",
+          "event: message-end",
+          "data: {\"type\":\"message-end\",\"delta\":{\"finish_reason\":\"COMPLETE\",\"usage\":{\"billed_units\":{\"input_tokens\":5,\"output_tokens\":3},\"tokens\":{\"input_tokens\":40,\"output_tokens\":12}}}}",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}

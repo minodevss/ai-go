@@ -1,0 +1,87 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.cohere.com/v2/chat"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "7d9e2f4a-6b1c-4d3e-8f50-1a2b3c4d5e6f",
+          "finish_reason": "COMPLETE",
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "The grass is green."
+              }
+            ],
+            "citations": [
+              {
+                "start": 4,
+                "end": 9,
+                "text": "grass",
+                "content_index": 0,
+                "type": "TEXT_CONTENT",
+                "sources": [
+                  {
+                    "type": "document",
+                    "id": "0",
+                    "document": {
+                      "id": "0",
+                      "snippet": "The grass is green.",
+                      "title": "colors.txt"
+                    }
+                  }
+                ]
+              },
+              {
+                "start": 13,
+                "end": 18,
+                "text": "green",
+                "content_index": 0,
+                "type": "TEXT_CONTENT",
+                "sources": [
+                  {
+                    "type": "document",
+                    "id": "0",
+                    "document": {
+                      "id": "0",
+                      "snippet": "The grass is green.",
+                      "title": "colors.txt"
+                    }
+                  },
+                  {
+                    "type": "tool",
+                    "id": "lookup_x9y8z7w6v5u4:0",
+                    "tool_output": {
+                      "title": "palette",
+                      "content": "green is #00FF00"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "usage": {
+            "billed_units": {
+              "input_tokens": 5,
+              "output_tokens": 3
+            },
+            "tokens": {
+              "input_tokens": 40,
+              "output_tokens": 12
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.cohere.com/v2/chat"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "c14c80c3-18eb-4519-9460-6c92edd8cfb4",
+          "finish_reason": "TOOL_CALL",
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants the weather in Seoul, so I should call get_weather."
+              }
+            ],
+            "tool_plan": "I will look up the current weather in Seoul with get_weather.",
+            "tool_calls": [
+              {
+                "id": "get_weather_k5mq2x8v1c9d",
+                "type": "function",
+                "function": {
+                  "name": "get_weather",
+                  "arguments": "{\"city\":\"Seoul\"}"
+                }
+              }
+            ]
+          },
+          "usage": {
+            "billed_units": {
+              "input_tokens": 5,
+              "output_tokens": 3
+            },
+            "tokens": {
+              "input_tokens": 106,
+              "output_tokens": 85
+            },
+            "cached_tokens": 64
+          }
+        }
+      }
+    }
+  ]
+}
