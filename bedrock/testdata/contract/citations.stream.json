@@ -1,0 +1,118 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse-stream"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/vnd.amazon.eventstream"
+          ]
+        },
+        "body": {
+          "events": [
+            {
+              "type": "messageStart",
+              "payload": {
+                "role": "assistant"
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": "The grass"
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": " is green."
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "citation": {
+                    "title": "notes.txt",
+                    "location": {
+                      "documentChar": {
+                        "documentIndex": 0,
+                        "start": 0,
+                        "end": 19
+                      }
+                    },
+                    "sourceContent": [
+                      {
+                        "text": "The grass is green."
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 0
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 1,
+                "delta": {
+                  "text": "Anythin"
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 1,
+                "delta": {
+                  "text": "g else?"
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 1
+              }
+            },
+            {
+              "type": "messageStop",
+              "payload": {
+                "stopReason": "end_turn"
+              }
+            },
+            {
+              "type": "metadata",
+              "payload": {
+                "usage": {
+                  "inputTokens": 60,
+                  "outputTokens": 18,
+                  "totalTokens": 78
+                },
+                "metrics": {
+                  "latencyMs": 312
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

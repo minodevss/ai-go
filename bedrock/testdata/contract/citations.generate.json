@@ -1,0 +1,65 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "output": {
+            "message": {
+              "role": "assistant",
+              "content": [
+                {
+                  "citationsContent": {
+                    "content": [
+                      {
+                        "text": "The grass is green."
+                      }
+                    ],
+                    "citations": [
+                      {
+                        "title": "notes.txt",
+                        "location": {
+                          "documentChar": {
+                            "documentIndex": 0,
+                            "start": 0,
+                            "end": 19
+                          }
+                        },
+                        "sourceContent": [
+                          {
+                            "text": "The grass is green."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "text": "Anything else?"
+                }
+              ]
+            }
+          },
+          "stopReason": "end_turn",
+          "usage": {
+            "inputTokens": 60,
+            "outputTokens": 18,
+            "totalTokens": 78
+          },
+          "metrics": {
+            "latencyMs": 312
+          }
+        }
+      }
+    }
+  ]
+}

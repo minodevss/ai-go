@@ -1,0 +1,73 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse-stream"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/vnd.amazon.eventstream"
+          ]
+        },
+        "body": {
+          "events": [
+            {
+              "type": "messageStart",
+              "payload": {
+                "role": "assistant"
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": "Your order shipped yester"
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": "day and arrives on Friday."
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 0
+              }
+            },
+            {
+              "type": "messageStop",
+              "payload": {
+                "stopReason": "end_turn"
+              }
+            },
+            {
+              "type": "metadata",
+              "payload": {
+                "usage": {
+                  "inputTokens": 14,
+                  "outputTokens": 12,
+                  "totalTokens": 2074,
+                  "cacheReadInputTokens": 2048,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 312
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

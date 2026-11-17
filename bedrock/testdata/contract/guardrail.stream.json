@@ -1,0 +1,90 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse-stream"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/vnd.amazon.eventstream"
+          ]
+        },
+        "body": {
+          "events": [
+            {
+              "type": "messageStart",
+              "payload": {
+                "role": "assistant"
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": "Sorry, the model c"
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": "annot answer that."
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 0
+              }
+            },
+            {
+              "type": "messageStop",
+              "payload": {
+                "stopReason": "guardrail_intervened"
+              }
+            },
+            {
+              "type": "metadata",
+              "payload": {
+                "usage": {
+                  "inputTokens": 10,
+                  "outputTokens": 9,
+                  "totalTokens": 19
+                },
+                "metrics": {
+                  "latencyMs": 312
+                },
+                "trace": {
+                  "guardrail": {
+                    "actionReason": "Guardrail blocked.",
+                    "inputAssessment": {
+                      "gr1abcd2efgh": {
+                        "topicPolicy": {
+                          "topics": [
+                            {
+                              "name": "Investment advice",
+                              "type": "DENY",
+                              "action": "BLOCKED",
+                              "detected": true
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

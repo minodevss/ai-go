@@ -1,0 +1,58 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "output": {
+            "message": {
+              "role": "assistant",
+              "content": [
+                {
+                  "text": "Sorry, the model cannot answer that."
+                }
+              ]
+            }
+          },
+          "stopReason": "guardrail_intervened",
+          "usage": {
+            "inputTokens": 10,
+            "outputTokens": 9,
+            "totalTokens": 19
+          },
+          "metrics": {
+            "latencyMs": 312
+          },
+          "trace": {
+            "guardrail": {
+              "actionReason": "Guardrail blocked.",
+              "inputAssessment": {
+                "gr1abcd2efgh": {
+                  "topicPolicy": {
+                    "topics": [
+                      {
+                        "name": "Investment advice",
+                        "type": "DENY",
+                        "action": "BLOCKED",
+                        "detected": true
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

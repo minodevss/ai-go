@@ -1,0 +1,60 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "output": {
+            "message": {
+              "role": "assistant",
+              "content": [
+                {
+                  "reasoningContent": {
+                    "reasoningText": {
+                      "text": "The user wants the weather, so I should call the weather tool for Seoul.",
+                      "signature": "EqQBCgIYAhIM1gbcDa9GJwZA2b3hGgxBdjrkzLoky3dl1pkiMOYds"
+                    }
+                  }
+                },
+                {
+                  "reasoningContent": {
+                    "redactedContent": "RW5jcnlwdGVkIHJlYXNvbmluZyB0aGF0IHRoZSBtb2RlbCBwcm92aWRlciBoaWQ="
+                  }
+                },
+                {
+                  "toolUse": {
+                    "toolUseId": "tooluse_vN7jKq2fR8a1Zp0Xb3Tg5w",
+                    "name": "get_weather",
+                    "input": {
+                      "city": "Seoul"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "stopReason": "tool_use",
+          "usage": {
+            "inputTokens": 20,
+            "outputTokens": 85,
+            "totalTokens": 199,
+            "cacheReadInputTokens": 64,
+            "cacheWriteInputTokens": 30
+          },
+          "metrics": {
+            "latencyMs": 312
+          }
+        }
+      }
+    }
+  ]
+}

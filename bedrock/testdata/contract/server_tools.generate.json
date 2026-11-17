@@ -1,0 +1,71 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "output": {
+            "message": {
+              "role": "assistant",
+              "content": [
+                {
+                  "text": "Let me look that up."
+                },
+                {
+                  "toolUse": {
+                    "toolUseId": "srvtooluse_01Search",
+                    "name": "web_search",
+                    "input": {
+                      "query": "weather in Seoul"
+                    },
+                    "type": "server_tool_use"
+                  }
+                },
+                {
+                  "toolResult": {
+                    "toolUseId": "srvtooluse_01Search",
+                    "content": [
+                      {
+                        "json": {
+                          "results": [
+                            {
+                              "title": "Seoul weather",
+                              "url": "https://example.com/seoul"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "status": "success",
+                    "type": "web_search_result"
+                  }
+                },
+                {
+                  "text": "It is sunny in Seoul."
+                }
+              ]
+            }
+          },
+          "stopReason": "end_turn",
+          "usage": {
+            "inputTokens": 300,
+            "outputTokens": 120,
+            "totalTokens": 420
+          },
+          "metrics": {
+            "latencyMs": 312
+          }
+        }
+      }
+    }
+  ]
+}

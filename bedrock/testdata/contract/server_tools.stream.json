@@ -1,0 +1,175 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse-stream"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/vnd.amazon.eventstream"
+          ]
+        },
+        "body": {
+          "events": [
+            {
+              "type": "messageStart",
+              "payload": {
+                "role": "assistant"
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": "Let me loo"
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "text": "k that up."
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 0
+              }
+            },
+            {
+              "type": "contentBlockStart",
+              "payload": {
+                "contentBlockIndex": 1,
+                "start": {
+                  "toolUse": {
+                    "toolUseId": "srvtooluse_01Search",
+                    "name": "web_search",
+                    "type": "server_tool_use"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 1,
+                "delta": {
+                  "toolUse": {
+                    "input": "{\"query\":\"weat"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 1,
+                "delta": {
+                  "toolUse": {
+                    "input": "her in Seoul\"}"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 1
+              }
+            },
+            {
+              "type": "contentBlockStart",
+              "payload": {
+                "contentBlockIndex": 2,
+                "start": {
+                  "toolResult": {
+                    "toolUseId": "srvtooluse_01Search",
+                    "status": "success",
+                    "type": "web_search_result"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 2,
+                "delta": {
+                  "toolResult": [
+                    {
+                      "json": {
+                        "results": [
+                          {
+                            "title": "Seoul weather",
+                            "url": "https://example.com/seoul"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 2
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 3,
+                "delta": {
+                  "text": "It is sunn"
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 3,
+                "delta": {
+                  "text": "y in Seoul."
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 3
+              }
+            },
+            {
+              "type": "messageStop",
+              "payload": {
+                "stopReason": "end_turn"
+              }
+            },
+            {
+              "type": "metadata",
+              "payload": {
+                "usage": {
+                  "inputTokens": 300,
+                  "outputTokens": 120,
+                  "totalTokens": 420
+                },
+                "metrics": {
+                  "latencyMs": 312
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

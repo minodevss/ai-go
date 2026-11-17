@@ -1,0 +1,39 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "output": {
+            "message": {
+              "role": "assistant",
+              "content": [
+                {
+                  "text": "{\"a\":\"x\",\"b\":[1,2],\"c\":{}}"
+                }
+              ]
+            }
+          },
+          "stopReason": "end_turn",
+          "usage": {
+            "inputTokens": 30,
+            "outputTokens": 12,
+            "totalTokens": 42
+          },
+          "metrics": {
+            "latencyMs": 312
+          }
+        }
+      }
+    }
+  ]
+}

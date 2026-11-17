@@ -1,0 +1,145 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-sonnet-4-5-20250929-v1%3A0/converse-stream"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/vnd.amazon.eventstream"
+          ]
+        },
+        "body": {
+          "events": [
+            {
+              "type": "messageStart",
+              "payload": {
+                "role": "assistant"
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "reasoningContent": {
+                    "text": "The user wants the weather, so I sho"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "reasoningContent": {
+                    "text": "uld call the weather tool for Seoul."
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 0,
+                "delta": {
+                  "reasoningContent": {
+                    "signature": "EqQBCgIYAhIM1gbcDa9GJwZA2b3hGgxBdjrkzLoky3dl1pkiMOYds"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 0
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 1,
+                "delta": {
+                  "reasoningContent": {
+                    "redactedContent": "RW5jcnlwdGVkIHJlYXNvbmluZyB0aGF0IHRoZSBtb2RlbCBwcm92aWRlciBoaWQ="
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 1
+              }
+            },
+            {
+              "type": "contentBlockStart",
+              "payload": {
+                "contentBlockIndex": 2,
+                "start": {
+                  "toolUse": {
+                    "toolUseId": "tooluse_vN7jKq2fR8a1Zp0Xb3Tg5w",
+                    "name": "get_weather"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 2,
+                "delta": {
+                  "toolUse": {
+                    "input": "{\"city\":"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockDelta",
+              "payload": {
+                "contentBlockIndex": 2,
+                "delta": {
+                  "toolUse": {
+                    "input": "\"Seoul\"}"
+                  }
+                }
+              }
+            },
+            {
+              "type": "contentBlockStop",
+              "payload": {
+                "contentBlockIndex": 2
+              }
+            },
+            {
+              "type": "messageStop",
+              "payload": {
+                "stopReason": "tool_use"
+              }
+            },
+            {
+              "type": "metadata",
+              "payload": {
+                "usage": {
+                  "inputTokens": 20,
+                  "outputTokens": 85,
+                  "totalTokens": 199,
+                  "cacheReadInputTokens": 64,
+                  "cacheWriteInputTokens": 30
+                },
+                "metrics": {
+                  "latencyMs": 312
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
