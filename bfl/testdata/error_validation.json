@@ -1,0 +1,1 @@
+{"detail":[{"loc":["body","width"],"msg":"Input should be a multiple of 32","type":"value_error"}]}
