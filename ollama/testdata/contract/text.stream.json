@@ -1,0 +1,25 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/chat"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/x-ndjson"
+          ]
+        },
+        "bodyLines": [
+          "{\"model\":\"qwen3\",\"created_at\":\"2026-11-17T09:00:00.0Z\",\"message\":{\"role\":\"assistant\",\"content\":\"The sky\"},\"done\":false}",
+          "{\"model\":\"qwen3\",\"created_at\":\"2026-11-17T09:00:00.0Z\",\"message\":{\"role\":\"assistant\",\"content\":\" is blue\"},\"done\":false}",
+          "{\"model\":\"qwen3\",\"created_at\":\"2026-11-17T09:00:00.0Z\",\"message\":{\"role\":\"assistant\",\"content\":\" because of Rayleigh scattering.\"},\"done\":false}",
+          "{\"model\":\"qwen3\",\"created_at\":\"2026-11-17T09:00:00.123456Z\",\"done\":true,\"done_reason\":\"stop\",\"total_duration\":5191566416,\"load_duration\":2154458,\"prompt_eval_count\":26,\"prompt_eval_cached_count\":16,\"prompt_eval_duration\":383809000,\"eval_count\":298,\"eval_duration\":4799921000,\"message\":{\"role\":\"assistant\",\"content\":\"\"}}",
+          ""
+        ]
+      }
+    }
+  ]
+}
