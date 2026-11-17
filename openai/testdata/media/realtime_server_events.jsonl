@@ -1,0 +1,10 @@
+{"type":"session.created","event_id":"event_1","session":{"type":"realtime","id":"sess_1","model":"gpt-realtime"}}
+{"type":"response.created","event_id":"event_2","response":{"id":"resp_1","object":"realtime.response","status":"in_progress","output":[]}}
+{"type":"response.output_audio.delta","event_id":"event_3","response_id":"resp_1","item_id":"item_1","output_index":0,"content_index":0,"delta":"AQID"}
+{"type":"response.output_audio_transcript.delta","event_id":"event_4","response_id":"resp_1","item_id":"item_1","output_index":0,"content_index":0,"delta":"Hel"}
+{"type":"response.output_audio_transcript.done","event_id":"event_5","response_id":"resp_1","item_id":"item_1","output_index":0,"content_index":0,"transcript":"Hello"}
+{"type":"response.output_text.delta","event_id":"event_6","response_id":"resp_1","item_id":"item_1","output_index":0,"content_index":0,"delta":"Hi"}
+{"type":"conversation.item.input_audio_transcription.delta","event_id":"event_7","item_id":"item_0","content_index":0,"delta":"Wh"}
+{"type":"conversation.item.input_audio_transcription.completed","event_id":"event_8","item_id":"item_0","content_index":0,"transcript":"What?","usage":{"type":"tokens","total_tokens":10,"input_tokens":8,"output_tokens":2}}
+{"type":"rate_limits.updated","event_id":"event_9","rate_limits":[{"name":"requests","limit":1000,"remaining":999,"reset_seconds":60}]}
+{"type":"response.done","event_id":"event_10","response":{"id":"resp_1","object":"realtime.response","status":"completed","output":[{"id":"item_2","object":"realtime.item","type":"function_call","status":"completed","call_id":"call_1","name":"get_weather","arguments":"{\"city\":\"Seoul\"}"},{"id":"item_3","object":"realtime.item","type":"function_call","status":"completed","call_id":"call_2","name":"get_time","arguments":"{}"}],"usage":{"total_tokens":30,"input_tokens":20,"output_tokens":10}}}

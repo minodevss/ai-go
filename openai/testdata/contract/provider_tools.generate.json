@@ -1,0 +1,133 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "resp_p1",
+          "object": "response",
+          "created_at": 1760000000,
+          "status": "completed",
+          "background": false,
+          "error": null,
+          "incomplete_details": null,
+          "model": "gpt-5-mini",
+          "output": [
+            {
+              "id": "ws_111",
+              "type": "web_search_call",
+              "status": "completed",
+              "action": {
+                "type": "search",
+                "query": "go sdk",
+                "sources": [
+                  {
+                    "type": "url",
+                    "url": "https://go.dev"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "fs_222",
+              "type": "file_search_call",
+              "status": "completed",
+              "queries": [
+                "policy"
+              ],
+              "results": [
+                {
+                  "file_id": "file-1",
+                  "filename": "p.pdf",
+                  "score": 0.9,
+                  "text": "policy text"
+                }
+              ]
+            },
+            {
+              "id": "ci_333",
+              "type": "code_interpreter_call",
+              "status": "completed",
+              "code": "print(1+1)",
+              "container_id": "cntr_9",
+              "outputs": [
+                {
+                  "type": "logs",
+                  "logs": "2\n"
+                }
+              ]
+            },
+            {
+              "id": "ig_444",
+              "type": "image_generation_call",
+              "status": "completed",
+              "background": "opaque",
+              "output_format": "png",
+              "quality": "low",
+              "size": "1024x1024",
+              "result": "iVBORw0KGgo="
+            },
+            {
+              "id": "mcpl_555",
+              "type": "mcp_list_tools",
+              "server_label": "docs",
+              "tools": [
+                {
+                  "name": "search",
+                  "input_schema": {
+                    "type": "object"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "mcp_666",
+              "type": "mcp_call",
+              "status": "completed",
+              "server_label": "docs",
+              "name": "search",
+              "arguments": "{\"q\":\"x\"}",
+              "output": "found",
+              "error": null
+            },
+            {
+              "id": "msg_777",
+              "type": "message",
+              "status": "completed",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "Done.",
+                  "annotations": []
+                }
+              ]
+            }
+          ],
+          "service_tier": "default",
+          "store": false,
+          "usage": {
+            "input_tokens": 300,
+            "input_tokens_details": {
+              "cached_tokens": 200
+            },
+            "output_tokens": 120,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 420
+          }
+        }
+      }
+    }
+  ]
+}

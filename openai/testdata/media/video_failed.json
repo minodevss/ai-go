@@ -1,0 +1,1 @@
+{"id":"video_123","object":"video","model":"sora-2","status":"failed","progress":30,"created_at":1712697600,"completed_at":null,"expires_at":null,"prompt":"p","size":"1280x720","seconds":"8","remixed_from_video_id":null,"error":{"code":"moderation_blocked","message":"The prompt was blocked by moderation."}}

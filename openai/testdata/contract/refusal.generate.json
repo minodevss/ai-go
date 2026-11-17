@@ -1,0 +1,55 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "resp_f1",
+          "object": "response",
+          "created_at": 1760000000,
+          "status": "completed",
+          "background": false,
+          "error": null,
+          "incomplete_details": null,
+          "model": "gpt-5-mini",
+          "output": [
+            {
+              "id": "msg_fff6",
+              "type": "message",
+              "status": "completed",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "refusal",
+                  "refusal": "I can't help with that."
+                }
+              ]
+            }
+          ],
+          "service_tier": "default",
+          "store": false,
+          "usage": {
+            "input_tokens": 15,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 8,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 23
+          }
+        }
+      }
+    }
+  ]
+}

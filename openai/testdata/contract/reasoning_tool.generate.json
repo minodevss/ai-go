@@ -1,0 +1,67 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "resp_r1",
+          "object": "response",
+          "created_at": 1760000000,
+          "status": "completed",
+          "background": false,
+          "error": null,
+          "incomplete_details": null,
+          "model": "gpt-5-mini",
+          "output": [
+            {
+              "id": "rs_aaa1",
+              "type": "reasoning",
+              "summary": [
+                {
+                  "type": "summary_text",
+                  "text": "**Checking weather**\n\nI should call the weather tool."
+                },
+                {
+                  "type": "summary_text",
+                  "text": "**Planning**\n\nCall get_weather for Seoul."
+                }
+              ],
+              "encrypted_content": "gAAAAABo&<enc>+/=Zm9vYmFy",
+              "status": "completed"
+            },
+            {
+              "id": "fc_bbb2",
+              "type": "function_call",
+              "status": "completed",
+              "arguments": "{\"city\":\"Seoul\"}",
+              "call_id": "call_ccc3",
+              "name": "get_weather"
+            }
+          ],
+          "service_tier": "default",
+          "store": false,
+          "usage": {
+            "input_tokens": 120,
+            "input_tokens_details": {
+              "cached_tokens": 64
+            },
+            "output_tokens": 85,
+            "output_tokens_details": {
+              "reasoning_tokens": 70
+            },
+            "total_tokens": 205
+          }
+        }
+      }
+    }
+  ]
+}

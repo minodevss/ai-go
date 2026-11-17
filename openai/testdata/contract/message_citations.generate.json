@@ -1,0 +1,83 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": "resp_m1",
+          "object": "response",
+          "created_at": 1760000000,
+          "status": "completed",
+          "background": false,
+          "error": null,
+          "incomplete_details": null,
+          "model": "gpt-5-mini",
+          "output": [
+            {
+              "id": "rs_ddd4",
+              "type": "reasoning",
+              "summary": [],
+              "encrypted_content": "gAAAAABo&<enc>+/=Zm9vYmFy",
+              "status": "completed"
+            },
+            {
+              "id": "msg_eee5",
+              "type": "message",
+              "status": "completed",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "Tom & Jerry <3 the park, see docs.",
+                  "annotations": [
+                    {
+                      "type": "url_citation",
+                      "start_index": 0,
+                      "end_index": 11,
+                      "url": "https://example.com/a?x=1&y=2",
+                      "title": "Example & Co"
+                    },
+                    {
+                      "type": "file_citation",
+                      "index": 0,
+                      "file_id": "file-abc",
+                      "filename": "notes.pdf"
+                    }
+                  ],
+                  "logprobs": []
+                },
+                {
+                  "type": "output_text",
+                  "text": "Second part.",
+                  "annotations": []
+                }
+              ]
+            }
+          ],
+          "service_tier": "default",
+          "store": false,
+          "usage": {
+            "input_tokens": 40,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 30,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 70
+          }
+        }
+      }
+    }
+  ]
+}
