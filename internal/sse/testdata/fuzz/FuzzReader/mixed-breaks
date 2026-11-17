@@ -1,0 +1,2 @@
+go test fuzz v1
+string("event: a\r\ndata: x\rdata: y\n\n:\n\r")
