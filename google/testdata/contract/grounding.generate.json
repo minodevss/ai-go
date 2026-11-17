@@ -1,0 +1,98 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:generateContent"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "**Searching**",
+                    "thought": true
+                  },
+                  {
+                    "text": "서울은 한국의 수도입니다. "
+                  },
+                  {
+                    "text": "Seoul is the capital.",
+                    "thoughtSignature": "CiUB&<ground>+/=Z3Jk"
+                  }
+                ]
+              },
+              "finishReason": "STOP",
+              "index": 0,
+              "groundingMetadata": {
+                "webSearchQueries": [
+                  "capital of South Korea"
+                ],
+                "searchEntryPoint": {
+                  "renderedContent": "<div>chip</div>"
+                },
+                "groundingChunks": [
+                  {
+                    "web": {
+                      "uri": "https://example.com/seoul",
+                      "title": "example.com"
+                    }
+                  },
+                  {
+                    "web": {
+                      "uri": "https://example.org/korea",
+                      "title": "example.org"
+                    }
+                  }
+                ],
+                "groundingSupports": [
+                  {
+                    "segment": {
+                      "startIndex": 37,
+                      "endIndex": 58,
+                      "text": "Seoul is the capital."
+                    },
+                    "groundingChunkIndices": [
+                      0,
+                      1
+                    ],
+                    "confidenceScores": [
+                      0.9,
+                      0.8
+                    ]
+                  }
+                ]
+              },
+              "urlContextMetadata": {
+                "urlMetadata": [
+                  {
+                    "retrievedUrl": "https://example.com/seoul",
+                    "urlRetrievalStatus": "URL_RETRIEVAL_STATUS_SUCCESS"
+                  }
+                ]
+              }
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 100,
+            "toolUsePromptTokenCount": 30,
+            "candidatesTokenCount": 20,
+            "thoughtsTokenCount": 10,
+            "totalTokenCount": 160
+          },
+          "modelVersion": "gemini-3-flash",
+          "responseId": "resp_g1"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:streamGenerateContent?alt=sse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"Let me compute.\"}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_c1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"executableCode\":{\"language\":\"PYTHON\",\"code\":\"print(17*23)\"}}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_c1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"codeExecutionResult\":{\"outcome\":\"OUTCOME_OK\",\"output\":\"391\\n\"}}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_c1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"inlineData\":{\"mimeType\":\"image/png\",\"data\":\"iVBORw0KGgo=\"},\"thoughtSignature\":\"CiEB&<img>+/=aW1n\"}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_c1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"17*23 = 391.\"}]},\"finishReason\":\"STOP\",\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":40,\"candidatesTokenCount\":30,\"totalTokenCount\":70},\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_c1\"}",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}

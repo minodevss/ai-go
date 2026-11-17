@@ -1,0 +1,42 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:generateContent"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "The quick brown"
+                  }
+                ]
+              },
+              "finishReason": "MAX_TOKENS",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 10,
+            "candidatesTokenCount": 3,
+            "thoughtsTokenCount": 13,
+            "totalTokenCount": 26
+          },
+          "modelVersion": "gemini-3-flash",
+          "responseId": "resp_m1"
+        }
+      }
+    }
+  ]
+}

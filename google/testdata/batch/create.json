@@ -1,0 +1,1 @@
+{"name":"batches/123456","metadata":{"@type":"type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch","model":"models/gemini-3-flash","displayName":"ai-go-batch","createTime":"2026-11-17T10:00:00Z","updateTime":"2026-11-17T10:00:01Z","batchStats":{"requestCount":"2","pendingRequestCount":"2"},"state":"BATCH_STATE_PENDING","name":"batches/123456"}}

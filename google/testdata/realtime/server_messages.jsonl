@@ -1,0 +1,16 @@
+{"setupComplete":{}}
+{"serverContent":{"modelTurn":{"parts":[{"inlineData":{"mimeType":"audio/pcm;rate=24000","data":"AQID"}}]}}}
+{"serverContent":{"modelTurn":{"parts":[{"text":"thinking about it","thought":true},{"text":"Hello"}]}}}
+{"serverContent":{"inputTranscription":{"text":"turn on "}}}
+{"serverContent":{"inputTranscription":{"text":"the lights"}}}
+{"serverContent":{"outputTranscription":{"text":"Sure, "}}}
+{"serverContent":{"outputTranscription":{"text":"done."}}}
+{"toolCall":{"functionCalls":[{"id":"call_1","name":"turn_on_the_lights","args":{"room":"kitchen"}}]}}
+{"toolCallCancellation":{"ids":["call_1"]}}
+{"goAway":{"timeLeft":"50s"}}
+{"sessionResumptionUpdate":{"newHandle":"handle-1","resumable":true}}
+{"sessionResumptionUpdate":{"resumable":false}}
+{"serverContent":{"interrupted":true}}
+{"usageMetadata":{"promptTokenCount":20,"cachedContentTokenCount":4,"responseTokenCount":10,"thoughtsTokenCount":3,"totalTokenCount":33}}
+{"serverContent":{"generationComplete":true}}
+{"serverContent":{"turnComplete":true,"interactionStatus":"IDLE"}}

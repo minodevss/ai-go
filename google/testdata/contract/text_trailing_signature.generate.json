@@ -1,0 +1,45 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:generateContent"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "Hello there"
+                  },
+                  {
+                    "text": "",
+                    "thoughtSignature": "CiMB&<tail>+/=dGFpbA"
+                  }
+                ]
+              },
+              "finishReason": "STOP",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 10,
+            "candidatesTokenCount": 4,
+            "totalTokenCount": 14
+          },
+          "modelVersion": "gemini-3-flash",
+          "responseId": "resp_t1"
+        }
+      }
+    }
+  ]
+}

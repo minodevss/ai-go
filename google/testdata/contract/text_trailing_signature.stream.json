@@ -1,0 +1,27 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:streamGenerateContent?alt=sse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"Hel\"}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_t1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"lo there\"}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_t1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"\",\"thoughtSignature\":\"CiMB&<tail>+/=dGFpbA\"}]},\"finishReason\":\"STOP\",\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":10,\"candidatesTokenCount\":4,\"totalTokenCount\":14},\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_t1\"}",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}

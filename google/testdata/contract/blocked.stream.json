@@ -1,0 +1,23 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:streamGenerateContent?alt=sse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "data: {\"promptFeedback\":{\"blockReason\":\"SAFETY\",\"safetyRatings\":[{\"category\":\"HARM_CATEGORY_DANGEROUS_CONTENT\",\"probability\":\"HIGH\",\"blocked\":true}]},\"usageMetadata\":{\"promptTokenCount\":5,\"totalTokenCount\":5},\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_b1\"}",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:streamGenerateContent?alt=sse"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "text/event-stream"
+          ]
+        },
+        "bodyLines": [
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"**Checking weather**\\n\\n\",\"thought\":true}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_r1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"text\":\"I should call the weather tool.\",\"thought\":true}]},\"index\":0}],\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_r1\"}",
+          "",
+          "data: {\"candidates\":[{\"content\":{\"role\":\"model\",\"parts\":[{\"functionCall\":{\"id\":\"fc_aaa1\",\"name\":\"get_weather\",\"args\":{\"city\":\"Seoul\"}},\"thoughtSignature\":\"CiQB&<sig>+/=Zm9vYmFy\"}]},\"finishReason\":\"STOP\",\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":120,\"cachedContentTokenCount\":64,\"candidatesTokenCount\":15,\"thoughtsTokenCount\":70,\"totalTokenCount\":205},\"modelVersion\":\"gemini-3-flash\",\"responseId\":\"resp_r1\"}",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}

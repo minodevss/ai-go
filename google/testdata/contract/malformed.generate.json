@@ -1,0 +1,34 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:generateContent"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "candidates": [
+            {
+              "finishReason": "MALFORMED_FUNCTION_CALL",
+              "index": 0,
+              "finishMessage": "Malformed function call: print(default_api.get_weather(city='Seoul'))"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 12,
+            "candidatesTokenCount": 0,
+            "totalTokenCount": 12
+          },
+          "modelVersion": "gemini-3-flash",
+          "responseId": "resp_f1"
+        }
+      }
+    }
+  ]
+}

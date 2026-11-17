@@ -1,0 +1,1 @@
+{"files":[{"name":"files/abc-123","displayName":"notes.txt","mimeType":"text/plain","uri":"https://generativelanguage.googleapis.com/v1beta/files/abc-123","state":"ACTIVE"},{"name":"files/def-456","displayName":"a.pdf","mimeType":"application/pdf","uri":"https://generativelanguage.googleapis.com/v1beta/files/def-456","state":"ACTIVE"}],"nextPageToken":"tok2"}

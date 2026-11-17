@@ -1,0 +1,1 @@
+{"name":"batches/123456","metadata":{"@type":"type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch","createTime":"2026-11-17T10:00:00Z","batchStats":{"requestCount":"2","successfulRequestCount":"1","pendingRequestCount":"1"},"state":"JOB_STATE_RUNNING"}}

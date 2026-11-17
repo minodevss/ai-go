@@ -1,0 +1,63 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:generateContent"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "Let me compute."
+                  },
+                  {
+                    "executableCode": {
+                      "language": "PYTHON",
+                      "code": "print(17*23)"
+                    }
+                  },
+                  {
+                    "codeExecutionResult": {
+                      "outcome": "OUTCOME_OK",
+                      "output": "391\n"
+                    }
+                  },
+                  {
+                    "inlineData": {
+                      "mimeType": "image/png",
+                      "data": "iVBORw0KGgo="
+                    },
+                    "thoughtSignature": "CiEB&<img>+/=aW1n"
+                  },
+                  {
+                    "text": "17*23 = 391."
+                  }
+                ]
+              },
+              "finishReason": "STOP",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 40,
+            "candidatesTokenCount": 30,
+            "totalTokenCount": 70
+          },
+          "modelVersion": "gemini-3-flash",
+          "responseId": "resp_c1"
+        }
+      }
+    }
+  ]
+}

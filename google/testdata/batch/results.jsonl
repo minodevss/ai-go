@@ -1,0 +1,2 @@
+{"key":"request-2","response":{"candidates":[{"content":{"role":"model","parts":[{"text":"Dough, tomatoes and mozzarella."}]},"finishReason":"STOP"}],"usageMetadata":{"promptTokenCount":9,"candidatesTokenCount":5},"responseId":"r2"}}
+{"key":"request-1","error":{"code":14,"message":"The service is currently unavailable."}}

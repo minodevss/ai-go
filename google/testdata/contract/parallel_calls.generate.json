@@ -1,0 +1,56 @@
+{
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:generateContent"
+      },
+      "response": {
+        "status": 200,
+        "header": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "functionCall": {
+                      "name": "get_weather",
+                      "args": {
+                        "city": "Seoul"
+                      }
+                    },
+                    "thoughtSignature": "CjEB&<par>+/=YmF6"
+                  },
+                  {
+                    "functionCall": {
+                      "name": "get_weather",
+                      "args": {
+                        "city": "Busan"
+                      }
+                    }
+                  }
+                ]
+              },
+              "finishReason": "STOP",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 50,
+            "candidatesTokenCount": 20,
+            "thoughtsTokenCount": 30,
+            "totalTokenCount": 100
+          },
+          "modelVersion": "gemini-3-flash",
+          "responseId": "resp_p1"
+        }
+      }
+    }
+  ]
+}

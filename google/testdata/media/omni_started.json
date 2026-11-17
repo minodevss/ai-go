@@ -1,0 +1,1 @@
+{"id":"v1_abc123","status":"in_progress","model":"gemini-omni-1.2-flash","object":"interaction","steps":[{"type":"user_input","content":[{"type":"text","text":"A marble rolling."}]}]}
